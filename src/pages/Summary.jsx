@@ -10,7 +10,7 @@ export default function Summary() {
   useEffect(() => {
     const fetchSongs = async () => {
       const res = await secureFetch(
-        "http://localhost:3000/api/songs/artist-songs"
+        "https://musicbackend-b7il.onrender.com/api/songs/artist-songs"
       );
       const data = await res.json();
       setSongs(data.songs);

@@ -10,7 +10,9 @@ export default function ListenerHome() {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/songs");
+        const res = await fetch(
+          "https://musicbackend-b7il.onrender.com/api/songs"
+        );
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || "Failed to fetch songs");
         setSongs(data.songs || []);

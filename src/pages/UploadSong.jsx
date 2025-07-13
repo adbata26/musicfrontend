@@ -27,12 +27,15 @@ export default function UploadSong() {
     formData.append("artist_id", user.id);
 
     try {
-      const res = await secureFetch("http://localhost:3000/api/songs/upload", {
-        method: "POST",
-        body: formData,
-        // 👇 DO NOT manually set Content-Type here!
-        // Headers will be auto-handled by FormData
-      });
+      const res = await secureFetch(
+        "https://musicbackend-b7il.onrender.com/api/songs/upload",
+        {
+          method: "POST",
+          body: formData,
+          // 👇 DO NOT manually set Content-Type here!
+          // Headers will be auto-handled by FormData
+        }
+      );
 
       const result = await res.json();
 

@@ -39,7 +39,7 @@ export default function SongDetails() {
 
       {song.thumbnail && (
         <img
-          src={`http://localhost:3000${song.thumbnail}`}
+          src={`https://musicbackend-b7il.onrender.com/${song.thumbnail}`}
           alt={song.title}
           className="mb-6 w-full max-h-64 object-cover rounded"
         />

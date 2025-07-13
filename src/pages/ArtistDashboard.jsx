@@ -14,7 +14,7 @@ export default function ArtistDashboard() {
     const fetchSongs = async () => {
       try {
         const res = await secureFetch(
-          `http://localhost:3000/api/songs/artist-songs`,
+          `https://musicbackend-b7il.onrender.com/api/songs/artist-songs`,
           {
             method: "GET",
           }
